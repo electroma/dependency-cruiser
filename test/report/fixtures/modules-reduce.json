@@ -1,0 +1,33 @@
+[
+  {
+    "source": "core/some/main.js",
+    "dependencies": []
+  },
+  {
+    "source": "modules/mod1/src/moar-javascript.js",
+    "dependencies": []
+  },
+  {
+    "source": "modules/somemodule/src/somemodule.js",
+    "dependencies": [
+      {
+        "module": "mod1",
+        "resolved": "modules/mod1/src/moar-javascript.js",
+        "moduleSystem": "cjs",
+        "coreModule": false,
+        "followable": true,
+        "valid": false,
+        "dependencyTypes": ["npm"]
+      },
+      {
+        "module": "mod2",
+        "resolved": "modules/mod2/src/moar-javascript.js",
+        "moduleSystem": "cjs",
+        "coreModule": false,
+        "followable": true,
+        "valid": false,
+        "dependencyTypes": ["npm"]
+      }
+    ]
+  }
+]

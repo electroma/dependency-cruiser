@@ -7,12 +7,16 @@ const reportJson       = require("../report/jsonReporter");
 const reportDot        = require("../report/dotReporter");
 const reportCsv        = require("../report/csvReporter");
 const reportErr        = require("../report/errReporter");
+const modOnly          = require("../report/modulesOnly");
 const validateRuleSet  = require("./ruleSet/validate");
 const normalizeRuleSet = require("./ruleSet/normalize");
 const validateOptions  = require("./options/validate");
 const normalizeOptions = require("./options/normalize");
 
 const TYPE2REPORTER      = {
+    "mod-html" : modOnly(reportHtml),
+    "mod-json" : modOnly(reportJson),
+    "mod-dot" : modOnly(reportDot),
     "json" : reportJson,
     "html" : reportHtml,
     "dot"  : reportDot,
